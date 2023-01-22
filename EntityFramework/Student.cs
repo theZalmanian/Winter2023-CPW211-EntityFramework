@@ -10,7 +10,7 @@ namespace EntityFramework
     /// <summary>
     /// Represents an individual college student
     /// </summary>
-    internal class Student
+    public class Student
     {
         /// <summary>
         /// The student's ID number
@@ -26,6 +26,6 @@ namespace EntityFramework
         /// <summary>
         /// The student's date of birth
         /// </summary>
-        public DateOnly DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
     }
 }
