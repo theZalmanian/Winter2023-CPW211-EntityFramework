@@ -27,5 +27,10 @@ namespace EntityFramework
         /// The student's date of birth
         /// </summary>
         public DateTime DateOfBirth { get; set; }
+
+        /// <summary>
+        /// The student's given school email address
+        /// </summary>
+        public string EmailAddress { get; set; }
     }
 }
