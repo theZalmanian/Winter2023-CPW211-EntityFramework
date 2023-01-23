@@ -30,7 +30,18 @@
             // Execute all pending insert query
             dbContext.SaveChanges();
 
-            // Select Student from DB w/ EF Core
+            // Select all Students from DB w/ EF Core
+            List<Student> allStudents = dbContext.Students.ToList(); // Method Syntax
+
+            // OR
+
+            //  allStudents = (from stu in dbContext.Students
+            //                 select stu).ToList(); // Query syntax
+
+            foreach (Student currStudent in allStudents)
+            {
+                Console.WriteLine($"{currStudent.FullName}'s email address is: {currStudent.EmailAddress}");
+            }
         }
     }
 }
